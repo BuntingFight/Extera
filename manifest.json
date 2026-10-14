@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "files": {
+    "npcs-kill": {
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/BuntingFight/Extera/main/script-modules/npcs-kill.lua"
+    },
+    "team-switch": {
+      "version": "1.0.0",
+      "url": "https://raw.githubusercontent.com/BuntingFight/Extera/main/script-modules/team-switch.lua"
+    }
+  }
+}
