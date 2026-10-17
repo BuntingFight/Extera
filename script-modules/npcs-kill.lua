@@ -14,10 +14,10 @@ for _, v in ipairs(workspace:GetDescendants()) do
                     end
                 end)
 
-                local rootPart = model:FindFirstChild("HumanoidRootPart") or model:FindFirstChild("Torso") or model:FindFirstChild("UpperTorso")
+                local root = model:FindFirstChild("HumanoidRootPart") or model:FindFirstChild("Torso") or model:FindFirstChild("UpperTorso")
 
-                if rootPart then
-                    rootPart.Anchored = true
+                if root then
+                    root.Anchored = true
                 end
             end
         end
@@ -39,10 +39,10 @@ workspace.DescendantAdded:Connect(function(v)
                         end
                     end)
 
-                    local rootPart = model:FindFirstChild("HumanoidRootPart") or model:FindFirstChild("Torso") or model:FindFirstChild("UpperTorso")
+                    local root = model:FindFirstChild("HumanoidRootPart") or model:FindFirstChild("Torso") or model:FindFirstChild("UpperTorso")
 
-                    if rootPart then
-                        rootPart.Anchored = true
+                    if root then
+                        root.Anchored = true
                     end
                 end
             end
