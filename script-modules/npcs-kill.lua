@@ -14,9 +14,7 @@ for _, v in ipairs(workspace:GetDescendants()) do
                     end
                 end)
 
-                local rootPart = model:FindFirstChild("HumanoidRootPart")
-                    or model:FindFirstChild("Torso")
-                    or model:FindFirstChild("UpperTorso")
+                local rootPart = model:FindFirstChild("HumanoidRootPart") or model:FindFirstChild("Torso") or model:FindFirstChild("UpperTorso")
 
                 if rootPart then
                     rootPart.Anchored = true
