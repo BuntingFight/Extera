@@ -1,4 +1,7 @@
 local players = game:GetService("Players")
+local rs = game:GetService("ReplicatedStorage")
+
+local NPCUtils = require(rs.NPC.NPCUtils)
 
 for _, v in ipairs(workspace:GetDescendants()) do
     if v:IsA("Humanoid") then
@@ -14,10 +17,11 @@ for _, v in ipairs(workspace:GetDescendants()) do
                     end
                 end)
 
-                local root = model:FindFirstChild("HumanoidRootPart") or model:FindFirstChild("Torso") or model:FindFirstChild("UpperTorso")
-
-                if root then
-                    root.Anchored = true
+                if NPCUtils then
+                    pcall(function()
+                        NPCUtils.setTarget(model, nil)
+                        NPCUtils.setLookAt(model, nil)
+                    end)
                 end
             end
         end
@@ -39,10 +43,11 @@ workspace.DescendantAdded:Connect(function(v)
                         end
                     end)
 
-                    local root = model:FindFirstChild("HumanoidRootPart") or model:FindFirstChild("Torso") or model:FindFirstChild("UpperTorso")
-
-                    if root then
-                        root.Anchored = true
+                    if NPCUtils then
+                        pcall(function()
+                            NPCUtils.setTarget(model, nil)
+                            NPCUtils.setLookAt(model, nil)
+                        end)
                     end
                 end
             end
